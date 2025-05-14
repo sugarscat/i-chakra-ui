@@ -1,5 +1,5 @@
 import MarkdownRenderer from "@/components/markdown-renderer";
-import {Box} from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 export default function Markdown() {
   const content =
@@ -11,8 +11,8 @@ export default function Markdown() {
     "#### 四级标题\n" +
     "##### 五级标题\n" +
     "###### 六级标题\n\n" +
-    "**加粗**\n" +
-    "*斜体*\n" +
+    "**加粗**\n\n" +
+    "*斜体*\n\n" +
     "~~删除线~~\n\n" +
     "- 无序列表项 1\n" +
     "- 无序列表项 2\n" +
@@ -26,10 +26,17 @@ export default function Markdown() {
     "// 代码块\n" +
     "console.log('Hello, World!');\n" +
     "```\n\n" +
-    "![图片](/favicon.ico)";
-
-
-  return <Box p={4}>
-    <MarkdownRenderer content={content} />
-  </Box>;
+    "![图片](/img.png)\n\n" +
+    "[链接](https://www.bilibili.com/)\n\n" +
+    "| 标题 | 标题 | 标题 |\n" +
+    "| --- | --- | --- |\n" +
+    "| 内容 | 内容 | 内容 |\n" +
+    "| 内容 | 内容 | 内容 |\n" +
+    "| 内容 | 内容 | 内容 |\n\n" +
+    "公式：$E=mc^2$";
+  return (
+    <Box p={4}>
+      <MarkdownRenderer content={content} />
+    </Box>
+  );
 }
