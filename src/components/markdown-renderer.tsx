@@ -1,20 +1,10 @@
+import { Blockquote, Code, Em, Heading, Image, Link, List, Table, Text } from "@chakra-ui/react";
+import "katex/dist/katex.min.css";
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
-import rehypeKatex from "rehype-katex";
-import {
-  Heading,
-  Text,
-  Code,
-  Link,
-  Em,
-  Blockquote,
-  List,
-  Image,
-  Table,
-} from "@chakra-ui/react";
-import "katex/dist/katex.min.css";
 
 type MarkdownRendererProps = {
   content: string; // 需要渲染的 Markdown 内容
